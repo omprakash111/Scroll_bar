@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Down </title>
+    <style>
+         
+         *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+         }
+         html{
+            font-size: 40px;
+            font-family: 'Montserrat';
+            color: rgb(0, 0, 0);
+         }
+
+         section{
+                
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+         #sec-1{
+            background:linear-gradient(-45deg,#EE7752,#E73C7E,#23A6D5);
+
+
+         }
+         #sec-2{
+            background:linear-gradient(-45deg,#eee452,#3ccde7,#23d582);
+            
+
+         }
+         #sec-3{
+            background:linear-gradient(-45deg,#5fee52,#e7a33c,#23d5cc);
+            
+
+         }
+
+         .scroll-down{
+            height: 50px;
+            width: 30px;
+            border: 2px solid black;
+            position: absolute;
+            left:50%;
+            bottom: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+         }
+         .scroll-down::before,
+         .scroll-down::after{
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            border: 2px solid black;
+            height: 10px;
+            width: 10px;
+            transform: translate(-50%,-100%) rotate(45deg);
+            border-top: transparent;
+            border-left: transparent;
+            animation: scroll-down 1s ease-in-out infinite;
+         }
+
+         .scroll-down::after{
+            top: 30%;
+            animation-delay: .3s;
+         }
+         @keyframes scroll-down{
+            0%{
+                opacity: 0;
+            }
+           30%{
+                opacity: 1;
+            }
+            60%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                top:90%;
+                
+            }
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         .scroll-down2{
+            height: 50px;
+            width: 30px;
+            border: 2px solid black;
+            position: absolute;
+            left:50%;
+            bottom: -670px;
+            border-radius: 50px;
+            cursor: pointer;
+         }
+         .scroll-down2::before,
+         .scroll-down2::after{
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            border: 2px solid black;
+            height: 10px;
+            width: 10px;
+            transform: translate(-50%,-100%) rotate(45deg);
+            border-top: transparent;
+            border-left: transparent;
+            animation: scroll-down 1s ease-in-out infinite;
+         }
+
+         .scroll-down2::after{
+            top: 30%;
+            animation-delay: .3s;
+         }
+         @keyframes scroll-down2{
+            0%{
+                opacity: 0;
+            }
+           30%{
+                opacity: 1;
+            }
+            60%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+                top:90%;
+                
+            }
+         }
+
+    </style>
+</head>
+<body>
+    <section id="sec-1">
+        <dov class="container">
+            <H1>WELCOME TO OM <H1>
+            <a href="#sec-2">
+                <div class="scroll-down"></div>
+            
+            </a>
+        </dov>
+    </section>
+    <section id="sec-2">
+        <dov class="container">
+            <H1>NOW YOU ARE PRESENT IN SECTION 2<H1>
+                <a href="#sec-3">
+                    <div class="scroll-down2"></div>
+                
+                </a>
+        </dov>
+    </section>
+
+    <section id="sec-3">
+        <dov class="container">
+            <H1>PRESENT IN LAST SECTION <H1>
+                
+        </dov>
+    </section>
+
+</body>
+</html>
